@@ -1,0 +1,172 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", arial;
+}
+body {
+  height: 3000px;
+  background-color: #1f1f31;
+}
+#main-content {
+  z-index: 99;
+  display: flex;
+  position: relative;
+  height: 600px;
+  top: 0px;
+  left: 0;
+  right: 0;
+  margin: 0 48.5px;
+}
+.anime-previews {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.anime-images {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.anime-images::after {
+  width: 100%;
+  content: "";
+  position: absolute;
+  inset: 0;
+  box-shadow: inset -10px -10px 150px 150px rgba(31, 31, 49, 1);
+}
+.slideshow {
+  width: 1239px;
+  height: 600px;
+  object-fit: cover;
+}
+/*sliders*/
+.sliders {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+  position: absolute;
+  bottom: 50px;
+  right: 0;
+}
+.sliders button {
+  background-color: #3a3951;
+  border: none;
+  padding: 8px 10px;
+  border-radius: 6px;
+}
+.sliders button:hover {
+  background-color: #ffbade;
+}
+.sl {
+  color: #000;
+}
+/*anime info*/
+
+.anime-info {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 16px;
+  bottom: 100px;
+  row-gap: 10px;
+}
+.spotlight {
+  font-size: 18px;
+  color: #ffbade;
+  font-weight: 500;
+}
+.title {
+  font-size: 48px;
+  color: white;
+  line-height: 64px;
+  margin-bottom: 20px;
+}
+.ep-buttons,
+.ep-container {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  margin-right: 15px;
+}
+.ep-text {
+  color: white;
+}
+.ep-icon {
+  all: unset;
+  margin-right: 5px;
+}
+.abt-button {
+  display: flex;
+  flex-direction: row;
+}
+.abt-button .hd {
+  margin-right: 10px;
+}
+.abt {
+  display: flex;
+  flex-direction: row;
+  margin-right: 1px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3px;
+  height: 18px;
+  padding: 0 4px;
+  font-size: 12px;
+  font-weight: 500;
+}
+.hd {
+  border-radius: 6px;
+  border: none;
+  background-color: #ffbade;
+}
+.cc {
+  border-radius: 6px 0 0 6px;
+  border: none;
+  background-color: #b0e3af;
+}
+.mic {
+  border: none;
+  background-color: #b9e7ff;
+}
+.age {
+  border-radius: 0 6px 6px 0;
+  border: none;
+  background-color: #eeeeee33;
+  color: white;
+}
+.anime-description {
+  color: white;
+  margin: 20px 0;
+}
+.watchnow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0 8px;
+  font-size: 16px;
+  padding: 8px 15px;
+  background-color: #ffbade;
+  border-radius: 30px;
+  border: none;
+}
+.decision {
+  display: flex;
+  gap: 0 15px;
+}
+.details {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0 8px;
+  font-size: 16px;
+  padding: 8px 15px;
+  background-color: #3a3951;
+  color: white;
+  border-radius: 30px;
+  border: none;
+}
+.fa-greater-than {
+  transform: scale(0.8, 0.8);
+  padding-bottom: 2px;
+}
