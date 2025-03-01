@@ -48,7 +48,7 @@ body {
   row-gap: 5px;
   position: absolute;
   bottom: 50px;
-  right: 0;
+  right: 20px;
 }
 .sliders button {
   background-color: #3a3951;
@@ -62,8 +62,12 @@ body {
 .sl {
   color: #000;
 }
+@media (min-width: 1900px) {
+  .sliders {
+    right: 0;
+  }
+}
 /*anime info*/
-
 .anime-info {
   display: flex;
   flex-direction: column;
