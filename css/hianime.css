@@ -4,7 +4,6 @@
   font-family: Poppins, arial;
 }
 body {
-  height: 5900px;
   width: 100vw;
   background-color: #1f1f31;
 }
@@ -608,6 +607,10 @@ gap set in MAIN CONTENT 30px*/
   padding: 9px 10px;
   font-size: 14.4px;
 }
+.genre-names ul li:hover {
+  background-color: #51505e;
+  border-radius: 10px;
+}
 .genre-button {
   display: flex;
   width: 100%;
@@ -628,6 +631,9 @@ gap set in MAIN CONTENT 30px*/
   font-size: 14.4px;
   font-weight: 600;
   border-radius: 6px;
+}
+.show-more:hover {
+  background-color: #605f72a4;
 }
 .genre-header p {
   font-size: 22px;
@@ -977,7 +983,6 @@ gap set in MAIN CONTENT 30px*/
 }
 
 /*MEDIA*/
-
 @media (max-width: 500px) {
   .trending-anime-container {
     grid-template-columns: repeat(2, minmax(196px, 1fr));
@@ -1018,9 +1023,6 @@ gap set in MAIN CONTENT 30px*/
   .top {
     grid-template-columns: 1fr;
   }
-  body {
-    height: 6700px;
-  }
   .review-boxes {
     grid-template-columns: 1fr;
   }
@@ -1035,9 +1037,6 @@ gap set in MAIN CONTENT 30px*/
 @media (min-width: 731px) and (max-width: 879px) {
   .top {
     grid-template-columns: 1fr 1fr;
-  }
-  body {
-    height: 6800px;
   }
   .review-boxes {
     grid-template-columns: 1fr 1fr;
@@ -1055,9 +1054,6 @@ gap set in MAIN CONTENT 30px*/
   .top {
     grid-template-columns: 1fr 1fr;
   }
-  body {
-    height: 6400px;
-  }
   .review-boxes {
     grid-template-columns: 1fr 1fr 1fr;
   }
@@ -1073,14 +1069,21 @@ gap set in MAIN CONTENT 30px*/
   .top {
     grid-template-columns: 1fr 1fr;
   }
-  body {
-    height: 5600px;
-  }
   .review-boxes {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
   .comment-grid:nth-child(n + 5) {
     display: none;
     visibility: none;
+  }
+}
+@media (min-width: 0) and (max-width: 1440px) {
+  .latest-genres {
+    grid-template-columns: 1fr;
+  }
+}
+@media (min-width: 1441px) and (max-width: 1739px) {
+  .latest-genres {
+    grid-template-columns: 1fr auto;
   }
 }
