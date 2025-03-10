@@ -4,7 +4,7 @@
   font-family: Poppins, arial;
 }
 body {
-  height: 100vh;
+  height: auto;
   background-color: #1f1f31;
 }
 #main-content {
@@ -308,10 +308,9 @@ gap set in MAIN CONTENT 30px*/
 /*IMP*/
 .review-outer {
   height: 368px;
-  width: 100vw;
+  width: 100%;
+  z-index: 100;
   position: relative;
-  left: 50%;
-  transform: translateX(-50%);
   background-color: #2b2a3b;
 }
 .review-inner {
@@ -344,7 +343,6 @@ gap set in MAIN CONTENT 30px*/
   font-size: 14.4px;
   font-weight: 500;
   margin-right: 5px;
-  flex-shrink: 0;
 }
 .left-button button:nth-child(1) {
   all: unset;
@@ -568,17 +566,20 @@ gap set in MAIN CONTENT 30px*/
   grid-template-columns: repeat(6, 1fr);
   flex-direction: row;
   cursor: pointer;
+  row-gap: 30px;
 }
 .image-containers {
   display: flex;
   flex-direction: column;
   margin: 8px 11.2px;
   row-gap: 8px;
-  width: 207.8px;
+  width: auto;
+  height: auto;
 }
 .image-containers img {
   width: 100%;
-  height: 290.9px;
+  height: 100%;
+  aspect-ratio: 7/10;
   object-fit: cover;
 }
 .col-title {
@@ -1018,7 +1019,36 @@ gap set in MAIN CONTENT 30px*/
   }
 }
 
-@media (min-width: 500px) and (max-width: 730px) {
+@media (max-width: 599px) {
+  .top {
+    grid-template-columns: 1fr;
+  }
+  .review-boxes {
+    grid-template-columns: none;
+  }
+  .comment-grid:nth-child(n + 0) {
+    display: none;
+    visibility: none;
+  }
+  .review-container {
+    display: none;
+  }
+  .review-inner {
+    display: flex;
+  }
+  .discussion-logo {
+    width: 100%;
+  }
+  .discussion-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  .column-a {
+    grid-template-columns: repeat(2, auto);
+  }
+}
+@media (min-width: 600px) and (max-width: 730px) {
   .top {
     grid-template-columns: 1fr;
   }
@@ -1079,10 +1109,14 @@ gap set in MAIN CONTENT 30px*/
 @media (min-width: 0) and (max-width: 1440px) {
   .latest-genres {
     grid-template-columns: 1fr;
+    row-gap: 50px;
+  }
+  .genre-container {
+    padding: 16px;
   }
 }
 @media (min-width: 1441px) and (max-width: 1739px) {
   .latest-genres {
-    grid-template-columns: 1fr auto;
+    grid-template-columns: 3fr 1fr;
   }
 }
