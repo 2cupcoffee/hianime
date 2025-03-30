@@ -5,7 +5,6 @@ $(document).ready(function () {
     $(".banner-slider").owlCarousel({
       loop: true,
       nav: true,
-      navContainer: ".sliders",
       pullhDrag: true,
       autoplay: true,
       autoplayTimeout: 3000,
