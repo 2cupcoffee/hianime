@@ -1,7 +1,7 @@
 //Banner slider
 
 $(document).ready(function () {
-  $(".banner-slider").owlCarousel(
+
     $(".banner-slider").owlCarousel({
       loop: true,
       nav: true,
@@ -15,7 +15,7 @@ $(document).ready(function () {
         },
       },
     })
-  );
+
 });
 
 $(document).ready(function () {
